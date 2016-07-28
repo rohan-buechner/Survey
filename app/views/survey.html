@@ -1,0 +1,72 @@
+
+<div layout="column" flex layout-fill>
+    <md-content>
+        <section ng-repeat="(index, group) in categories" ng-class="{'dark' : $index > 1 }" class="section">
+            <md-list layout="column">
+                <md-item ng-repeat="item in categories[index].statements">
+                    <md-item-content>
+                        <div class=" md-tile-content">
+                            <div layout="horizontal">
+                                <div flex="15" style="border-right: 1px solid #BDBDBD; margin-right: 32px; position: relative; min-width: 216px;">
+                                    <div ng-if='$first' style="text-align: center; position: relative;">
+                                        <div style="position: relative; display: inline-block;">
+                                            <h2 class="side-title-{{group.category.toLowerCase()}}" style="transform: rotate(90deg); transform-origin: left top 0; font-size: 91px; position: absolute; margin-top: 165px; margin-left: 54px;">
+                                                {{group.category.toLowerCase()}}
+                                            </h2>
+                                        </div>
+                                        
+                                        <div type="text" style="font-size: 2em;text-align: center;color: #808080;font-weight: 100; margin-top: 45px">
+                                            {{((categories[index].statements.sum('rating') / categories[index].statements.length * 5 * 100) / categories[index].total.max) | number: 0}}
+                                        </div>
+                                         
+
+                                        <div style="margin-top: -99px" round-progress
+                                             max="categories[index].total.max"
+                                             current="(categories[index].statements.sum('rating') / categories[index].statements.length * 5)"
+                                             color="#45ccce"
+                                             bgcolor="#eaeaea"
+                                             radius="60"
+                                             stroke="20"
+                                             semi="false">
+                                        </div>
+
+                                        <div class="answered-total" style="">[ {{categories[index].statements.sum('answered')}}/{{categories[index].statements.length}} answered ]</div>
+                                    </div>
+
+                                </div>
+                                <div flex="75">
+                                    <h1>{{item.statement}}</h1>
+
+                                    <div layout="horizontal">
+                                        <div>
+                                            <ul class="clist2">
+                                                <li class="option {{getTheme(item.rating) +'-theme'}}" ng-class="{ 'selected' : item.rating == option.weight }" ng-click="listChange(item, option.weight)" ng-repeat="option in item.options" value="{{index}}">{{option.weight}}. {{option.text}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <md-slider ng-class="'md-' + getTheme(item.rating) +'-theme'" ng-change="sliderChange(item)" min="0" max="5" step="1" ng-model="item.rating" aria-label="rating">
+                                    </md-slider>
+                                </div>
+                            </div>
+                        </div>
+                    </md-item-content>
+                </md-item>
+            </md-list>
+        </section>
+
+       <!-- <section layout="horizontal" flex layout-fill style="height: 500px; padding-top: 170px;">
+            <div flex="30">
+            </div>
+            <div flex="40">
+                <section layout="vertical" flex layout-fill style="text-align: center">
+                    <h1>Click on the button below to view your results!</h1>
+                    <md-button class="md-raised md-primary" ng-click="showAdvanced($event)" style="height: 65px">Show My Results</md-button>
+                </section>
+            </div>
+            <div flex="30">
+
+            </div>
+        </section> -->
+    </md-content>
+</div>

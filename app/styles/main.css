@@ -1,0 +1,459 @@
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+
+
+.textFielddemoBasicUsage form > .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-left: -8px;
+}
+
+.textFielddemoBasicUsage .row > * {
+    font-size: inherit;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.textFielddemoBasicUsage md-input-group.long > input {
+    width: 264px;
+}
+
+
+
+
+/* Space out content a bit */
+body {
+    background-color: #191717;
+}
+
+html {
+    background: url('http://www.bsg.co.za/wp-content/themes/bsg/media/images/bg/trimming.png') repeat-x 0 0;
+    background-color: #191717;
+}
+
+.listdemoBasicUsage .face {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    width: 48px;
+    margin: 16px;
+}
+
+
+
+md-button.md-green-theme.md-raised.md-primary, md-button.md-green-theme.md-fab.md-primary {
+    color: #FFF;
+    background-color: #259B24;
+}
+
+md-button.md-green-theme.md-raised, md-button.md-green-theme.md-fab {
+}
+
+md-button.md-green-theme.md-primary {
+    color: #2BAF2B;
+    fill: #2BAF2B;
+}
+
+md-button.md-green-theme.md-fab {
+}
+
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+    /* Make the masthead heading the same height as the navigation */
+    .header h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        /* max-width: 730px; */
+    }
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+    .marketing p + h4 {
+        margin-top: 28px;
+    }
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+
+
+
+
+
+/*slider themes*/
+
+md-slider .md-track {
+    background-color: #C8C8C8;
+    height: 2px !important;
+}
+
+md-slider,
+.md-track-container,
+.md-thumb {
+    cursor: pointer;
+    cursor: hand;
+}
+
+    md-slider.md-one-theme .md-track-fill,
+    md-slider.md-one-theme .md-sign,
+    md-slider.md-one-theme .md-thumb:after {
+        border-color: #FD330B;
+        background-color: #FD330B;
+    }
+
+        md-slider.md-one-theme .md-sign:after {
+            border-top-color: #FD330B;
+        }
+
+    md-slider.md-two-theme .md-track-fill,
+    md-slider.md-two-theme .md-sign,
+    md-slider.md-two-theme .md-thumb:after {
+        border-color: #7BCC1A;
+        background-color: #7BCC1A;
+    }
+
+        md-slider.md-two-theme .md-sign:after {
+            border-top-color: #7BCC1A;
+        }
+
+    md-slider.md-three-theme .md-track-fill,
+    md-slider.md-three-theme .md-sign,
+    md-slider.md-three-theme .md-thumb:after {
+        border-color: #219DD2;
+        background-color: #219DD2;
+    }
+
+        md-slider.md-three-theme .md-sign:after {
+            border-top-color: #219DD2;
+        }
+
+    md-slider.md-four-theme .md-track-fill,
+    md-slider.md-four-theme .md-sign,
+    md-slider.md-four-theme .md-thumb:after {
+        border-color: #C254D4;
+        background-color: #C254D4;
+    }
+
+        md-slider.md-four-theme .md-sign:after {
+            border-top-color: #C254D4;
+        }
+
+    md-slider.md-five-theme .md-track-fill,
+    md-slider.md-five-theme .md-sign,
+    md-slider.md-five-theme .md-thumb:after {
+        border-color: #E5A900;
+        background-color: #E5A900;
+    }
+
+five md-slider.md-gold-theme .md-sign:after {
+    border-top-color: #E5A900;
+}
+
+md-slider .md-thumb:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    border: 3px solid;
+}
+
+/*SECOND*/
+ul.clist2 {
+    margin: 0;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+    ul.clist2 .option {
+        color: #7E7E7E;
+        font-size: 17px;
+        cursor: pointer;
+        cursor: hand;
+    }
+
+        ul.clist2 .option.selected {
+            color: grey;
+            font-weight: bold;
+        }
+
+
+
+            ul.clist2 .option.selected.one-theme {
+                color: #FD330B;
+            }
+
+            ul.clist2 .option.selected.two-theme {
+                color: #7BCC1A;
+            }
+
+            ul.clist2 .option.selected.three-theme {
+                color: #219DD2;
+            }
+
+            ul.clist2 .option.selected.four-theme {
+                color: #C254D4;
+            }
+
+            ul.clist2 .option.selected.five-theme {
+                color: #E5A900;
+            }
+
+/*SECOND*/
+
+/*MAIN*/
+ul.clist {
+    margin: 0;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+    ul.clist .option {
+        color: #C9C9C9;
+        font-size: 18px;
+    }
+
+
+        ul.clist .option.selected,
+        ul.clist .option[selected="selected"] {
+            color: grey;
+            font-weight: bold;
+        }
+/*MAIN*/
+
+
+.side-title-infrastructure {
+    font-size: 71px !important;
+    margin-left: 48px !important;
+}
+
+
+body {
+    height: auto !important;
+}
+
+
+h2.md-primary.md-subheader.ng-scope.md-default-theme.md-sticky-clone {
+    margin-top: 105px !important;
+}
+
+.md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
+    margin-top: 105px !important;
+}
+
+
+.answered-total {
+    margin-top: 555px;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.section {
+    background-color: white;
+}
+
+
+.dark h1 {
+    color: wheat;
+}
+
+.dark h2[class^="side-title-"] {
+    color: whitesmoke;
+}
+
+.dark ul.clist2 .option {
+    color: whitesmoke;
+}
+
+.dark .answered-total {
+    color: whitesmoke;
+}
+
+.dark.section {
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+.at-view-slide-in-left.ng-enter {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transform: translate(-100%, 0px);
+    -moz-transform: translate(-100%, 0px);
+    -ms-transform: translate(-100%, 0px);
+    -o-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.at-view-slide-in-left.ng-enter-active {
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    opacity: 1;
+    position: absolute;
+}
+
+.at-view-flip-out-right-opposite.ng-leave {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+}
+
+.at-view-flip-out-right-opposite.ng-leave-active {
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    opacity: 0;
+}
